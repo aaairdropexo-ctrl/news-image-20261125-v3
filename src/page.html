@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Red Sea on Edge — The World in One Day</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #fff; }
+  .page {
+    width: 1024px; height: 1024px; padding: 8px 14px 6px;
+    font-family: 'DejaVu Serif', serif; color: #000; background: #fff;
+  }
+  /* Top band: black, title + counts. The black band is deliberate:
+     it lifts whole-page contrast (v2b measured 63.3, field median 72.4). */
+  .topband {
+    background: #000; color: #fff; display: flex;
+    justify-content: space-between; align-items: center;
+    padding: 4px 10px; font-weight: 700; font-size: 15px; letter-spacing: .4px;
+  }
+  .topband .counts { font-size: 14px; }
+  .masthead {
+    text-align: center; font-weight: 700; font-size: 53px;
+    line-height: 1.04; letter-spacing: -.5px; margin-top: 4px; color: #000;
+  }
+  .subline {
+    text-align: center; font-style: italic; font-weight: 700;
+    color: #8f1616; font-size: 13px; margin: 2px 0 5px;
+  }
+  .chips { display: flex; gap: 5px; margin-bottom: 4px; }
+  .chip {
+    flex: 1; text-align: center; color: #fff; font-weight: 700;
+    font-size: 10.5px; padding: 3px 1px; border-radius: 2px; white-space: nowrap;
+  }
+  .fields { font-size: 8.5px; font-weight: 700; text-align: center; margin-bottom: 5px; }
+  .fields .fl { color: #8f1616; }
+  .stats {
+    display: flex; border-top: 3px solid #000; border-bottom: 3px solid #000;
+    padding: 3px 0; margin-bottom: 6px;
+  }
+  .stat { flex: 1; text-align: center; }
+  .stat + .stat { border-left: 1.5px solid #8a8a8a; }
+  .stat .n { font-size: 26px; font-weight: 700; line-height: 1; }
+  .stat .l { font-size: 9.5px; font-weight: 700; margin-top: 2px; }
+  /* UTC band: black, time-first items. It is a TIMELINE, not headlines:
+     times bold first, short phrases, clock markers, separated by dots. */
+  .utc {
+    background: #000; color: #fff; display: flex; align-items: center;
+    padding: 4px 10px; font-size: 11.5px; margin-bottom: 6px; gap: 6px;
+  }
+  .utc .lbl { font-weight: 700; color: #ff7a6e; letter-spacing: 1px; white-space: nowrap; }
+  .utc .it { white-space: nowrap; }
+  .utc .it b { font-weight: 700; }
+  .utc .sep { color: #ff7a6e; }
+  .heroes { display: flex; gap: 10px; margin-bottom: 6px; }
+  .hero { flex: 1; min-width: 0; }
+  .scene { height: 54px; }
+  .scene svg { display: block; width: 100%; height: 100%; }
+  .kick {
+    font-size: 11px; font-weight: 700; color: #8f1616;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 4px;
+  }
+  .badge {
+    font-size: 8.5px; border: 1.2px solid #000; padding: 1px 3px;
+    font-weight: 700; color: #000; background: #fff; white-space: nowrap;
+  }
+  .hero h2 { font-size: 17px; line-height: 1.12; margin: 3px 0 3px; font-weight: 700; }
+  .hero p { font-size: 11.5px; line-height: 1.28; margin-bottom: 3px; }
+  .why { font-size: 11px; line-height: 1.28; }
+  .why b { color: #8f1616; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topband">
+    <span>RED SEA ON EDGE — THE WORLD IN ONE DAY</span>
+    <span class="counts">50 STORIES · 10 REGIONS · 19 FIELDS</span>
+  </div>
+  <div class="masthead">Wednesday 25 November 2026</div>
+  <div class="subline">US proposes tariffs on 14 economies · AI doubts sink Asian chip stocks · Pakistan&rsquo;s first astronaut docks at Tiangong</div>
+  <div class="chips">
+    <span class="chip" style="background:#1b3a5c">N. AMERICA 8</span>
+    <span class="chip" style="background:#0f5c46">LATIN AMERICA 2</span>
+    <span class="chip" style="background:#1e3a8a">EUROPE 12</span>
+    <span class="chip" style="background:#8b1a1a">MIDDLE EAST 10</span>
+    <span class="chip" style="background:#6b4a12">N. AFRICA 2</span>
+    <span class="chip" style="background:#3d5a1e">SUB-SAHARAN AFRICA 5</span>
+    <span class="chip" style="background:#5c2d6b">SOUTH ASIA 3</span>
+    <span class="chip" style="background:#0b5563">EAST &amp; SE ASIA 5</span>
+    <span class="chip" style="background:#7a3b00">OCEANIA 2</span>
+    <span class="chip" style="background:#333333">GLOBAL 1</span>
+  </div>
+  <div class="fields"><span class="fl">19 FIELDS</span> — War 6 Diplomacy 6 Security 6 Business 5 Justice 3 Disaster 3 Rights 3 Markets 2 Labour 2 Crime 2 Tech 2 Politics 2 Economy 2 Trade 1 Space 1 Energy 1 Environment 1 Sport 1 Humanitarian 1</div>
+  <div class="stats">
+    <div class="stat"><div class="n">40%</div><div class="l">top proposed US tariff</div></div>
+    <div class="stat"><div class="n">&minus;6.2%</div><div class="l">Kospi close, worst in AI rout</div></div>
+    <div class="stat"><div class="n">+26%</div><div class="l">UK energy cap from 1 January</div></div>
+    <div class="stat"><div class="n">31</div><div class="l">killed in Cairo tanker fire</div></div>
+    <div class="stat"><div class="n">9</div><div class="l">dead, 17 trapped in Java pit</div></div>
+  </div>
+  <div class="utc">
+    <span class="lbl">&#9719; THE DAY IN UTC</span>
+    <span class="it"><b>00:18</b> Shenzhou-24 launches</span><span class="sep">&middot;</span>
+    <span class="it"><b>03:56</b> Docks at Tiangong</span><span class="sep">&middot;</span>
+    <span class="it"><b>05:30</b> Taiex &minus;4.8%</span><span class="sep">&middot;</span>
+    <span class="it"><b>06:30</b> Kospi &minus;6.2%</span><span class="sep">&middot;</span>
+    <span class="it"><b>08:42</b> Farmgate voided</span>
+  </div>
+  <div class="heroes">
+    <div class="hero">
+      <div class="scene"><svg viewBox="0 0 310 54" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="310" height="54" fill="#ffffff"/>
+        <rect x="0" y="38" width="310" height="16" fill="#111111"/>
+        <rect x="22" y="42" width="96" height="7" fill="#ffffff"/>
+        <rect x="34" y="35" width="7" height="7" fill="#ffffff"/>
+        <rect x="62" y="35" width="7" height="7" fill="#ffffff"/>
+        <rect x="90" y="35" width="7" height="7" fill="#ffffff"/>
+        <rect x="150" y="6" width="5" height="34" fill="#111111"/>
+        <rect x="150" y="6" width="44" height="5" fill="#111111"/>
+        <rect x="186" y="11" width="3" height="12" fill="#111111"/>
+        <rect x="184" y="23" width="7" height="6" fill="#111111"/>
+        <rect x="222" y="14" width="5" height="26" fill="#111111"/>
+        <rect x="222" y="14" width="36" height="5" fill="#111111"/>
+        <rect x="252" y="19" width="3" height="10" fill="#111111"/>
+        <circle cx="252" cy="8" r="10" fill="#c8102e"/>
+        <path d="M252 0 L254 6 L260 6 L255 10 L257 16 L252 12 L247 16 L249 10 L244 6 L250 6 Z" fill="#ff5a1f"/>
+      </svg></div>
+      <div class="kick"><span>1 &middot; HODEIDAH, YEMEN &middot; WAR</span><span class="badge">REPORTED</span></div>
+      <h2>Saudi-led coalition strikes Houthi-held Hodeidah port</h2>
+      <p>6+ airstrikes after a warning. Houthis threaten Jeddah; Saudis down 4 drones over Ras Tanura.</p>
+      <div class="why"><b>WHY IT MATTERS</b> Oil jumped as the war widened.</div>
+    </div>
+    <div class="hero">
+      <div class="scene"><svg viewBox="0 0 310 54" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="310" height="54" fill="#ffffff"/>
+        <rect x="0" y="48" width="310" height="6" fill="#111111"/>
+        <path d="M70 48 L70 22 L240 22 L240 48 Z" fill="#111111"/>
+        <path d="M60 22 L155 4 L250 22 Z" fill="#111111"/>
+        <circle cx="155" cy="13" r="3" fill="#ffffff"/>
+        <rect x="84" y="28" width="12" height="20" fill="#ffffff"/>
+        <rect x="108" y="28" width="12" height="20" fill="#ffffff"/>
+        <rect x="132" y="28" width="12" height="20" fill="#ffffff"/>
+        <rect x="190" y="28" width="12" height="20" fill="#ffffff"/>
+        <rect x="214" y="28" width="12" height="20" fill="#ffffff"/>
+        <rect x="148" y="32" width="14" height="16" fill="#ffffff"/>
+        <rect x="282" y="32" width="16" height="3" fill="#111111"/>
+        <rect x="288" y="35" width="4" height="13" fill="#111111"/>
+        <rect x="276" y="28" width="28" height="3" fill="#111111"/>
+      </svg></div>
+      <div class="kick"><span>2 &middot; CAPE TOWN &middot; JUSTICE</span><span class="badge">OFFICIAL</span></div>
+      <h2>Court voids &lsquo;Farmgate&rsquo; report; impeachment falls away</h2>
+      <p>Judges void the 2022 panel report; $580,000 was hidden in a sofa at Phala Phala farm.</p>
+      <div class="why"><b>WHY IT MATTERS</b> Impeachment falls away.</div>
+    </div>
+    <div class="hero">
+      <div class="scene"><svg viewBox="0 0 310 54" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="310" height="54" fill="#101c33"/>
+        <line x1="0" y1="13" x2="310" y2="13" stroke="#ffffff" stroke-width="1" stroke-opacity="0.25"/>
+        <line x1="0" y1="27" x2="310" y2="27" stroke="#ffffff" stroke-width="1" stroke-opacity="0.25"/>
+        <line x1="0" y1="41" x2="310" y2="41" stroke="#ffffff" stroke-width="1" stroke-opacity="0.25"/>
+        <polyline points="8,7 70,11 130,18 190,27 250,37 302,47" stroke="#ff3b30" stroke-width="5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="302" cy="47" r="4" fill="#ff3b30"/>
+        <circle cx="302" cy="47" r="8" fill="none" stroke="#ff3b30" stroke-width="1.5"/>
+      </svg></div>
+      <div class="kick"><span>3 &middot; SEOUL &middot; TOKYO &middot; TAIPEI &middot; MARKETS</span><span class="badge">REPORTED</span></div>
+      <h2>AI doubts sink Asian chip stocks: Kospi closes &minus;6.2%</h2>
+      <p>Kospi ends at 4,697.51; SK hynix &minus;11.1%, Samsung &minus;9.9%, Taiex &minus;4.8%, Nikkei &minus;2.8%.</p>
+      <div class="why"><b>WHY IT MATTERS</b> Investors doubt the AI boom.</div>
+    </div>
+  </div>
+  <style>
+    .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 6px; }
+    .card { border: 1.5px solid #000; padding: 4px 6px 4px; position: relative; background: #fff; }
+    .num {
+      position: absolute; top: -9px; left: 6px; width: 18px; height: 18px;
+      border-radius: 50%; background: #c8102e; color: #fff; font-weight: 700;
+      font-size: 11px; text-align: center; line-height: 18px;
+    }
+    .cscene { height: 48px; margin-top: 7px; }
+    .cscene svg { display: block; width: 100%; height: 100%; }
+    .ckick {
+      font-size: 8.5px; font-weight: 700; color: #8f1616; margin-top: 3px;
+      display: flex; justify-content: space-between; align-items: center; gap: 3px;
+    }
+    .ckick .badge { font-size: 8px; padding: 0 2px; }
+    .card h3 { font-size: 12.5px; line-height: 1.1; margin: 2px 0 3px; font-weight: 700; }
+    .card p { font-size: 10px; line-height: 1.3; }
+    .card .sub { font-size: 9px; font-weight: 700; margin: 2px 0 3px; }
+    .card .sub b { color: #8f1616; }
+  </style>
+  <div class="cards">
+    <div class="card"><span class="num">4</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <line x1="8" y1="44" x2="172" y2="44" stroke="#000" stroke-width="2"/>
+        <rect x="22" y="10" width="26" height="34" fill="#111111"/>
+        <rect x="56" y="16" width="26" height="28" fill="#555555"/>
+        <rect x="90" y="26" width="26" height="18" fill="#999999"/>
+        <rect x="124" y="30" width="26" height="14" fill="#cccccc"/>
+        <text x="35" y="8" font-family="DejaVu Serif" font-size="9" font-weight="bold" fill="#c8102e" text-anchor="middle">40%</text>
+      </svg></div>
+      <div class="ckick"><span>WASHINGTON &middot; TRADE</span><span class="badge">OFFICIAL</span></div>
+      <h3>US proposes tariffs of up to 40% on 14 economies</h3>
+      <div class="sub"><b>CHINA 40 &middot; VIETNAM 35 &middot; EU 15</b></div>
+      <p>Hearings January 2027; not in force yet.</p>
+    </div>
+    <div class="card"><span class="num">5</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <circle cx="128" cy="24" r="17" fill="none" stroke="#b8860b" stroke-width="3"/>
+        <rect x="18" y="16" width="88" height="16" rx="8" fill="#111111"/>
+        <rect x="30" y="8" width="18" height="8" fill="#111111"/>
+        <rect x="30" y="32" width="18" height="8" fill="#111111"/>
+        <rect x="76" y="8" width="18" height="8" fill="#111111"/>
+        <rect x="76" y="32" width="18" height="8" fill="#111111"/>
+        <circle cx="128" cy="24" r="6" fill="#c8102e"/>
+        <circle cx="160" cy="10" r="2" fill="#111111"/>
+        <circle cx="14" cy="38" r="2" fill="#111111"/>
+      </svg></div>
+      <div class="ckick"><span>JIUQUAN &middot; SPACE</span><span class="badge">OFFICIAL</span></div>
+      <h3>Pakistan&rsquo;s first astronaut docks at Tiangong</h3>
+      <p>Zeeshan Ali, 40, first foreigner on Tiangong; 5–10 days.</p>
+    </div>
+    <div class="card"><span class="num">6</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <rect x="18" y="22" width="92" height="16" rx="3" fill="#111111"/>
+        <rect x="110" y="26" width="26" height="12" fill="#111111"/>
+        <circle cx="40" cy="40" r="6" fill="#111111"/>
+        <circle cx="96" cy="40" r="6" fill="#111111"/>
+        <circle cx="128" cy="40" r="6" fill="#111111"/>
+        <path d="M150 30 Q156 12 146 8 Q154 20 144 22 Q152 26 150 30 Z" fill="#ff5a1f"/>
+        <path d="M162 32 Q168 18 160 14 Q166 24 158 26 Q164 30 162 32 Z" fill="#c8102e"/>
+        <rect x="132" y="2" width="44" height="13" fill="#c8102e"/>
+        <text x="154" y="12" font-family="DejaVu Serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">31 DEAD</text>
+      </svg></div>
+      <div class="ckick"><span>GIZA &middot; DISASTER</span><span class="badge">REPORTED</span></div>
+      <h3>Fuel tanker fire kills 31 near Cairo</h3>
+      <p>Overturned and exploded on a ring road; 21 injured.</p>
+    </div>
+    <div class="card"><span class="num">7</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <line x1="0" y1="44" x2="180" y2="44" stroke="#000" stroke-width="2"/>
+        <path d="M80 44 L100 8 L120 44 Z" fill="none" stroke="#111111" stroke-width="4"/>
+        <circle cx="100" cy="14" r="5" fill="none" stroke="#111111" stroke-width="3"/>
+        <line x1="100" y1="19" x2="100" y2="44" stroke="#111111" stroke-width="3"/>
+        <rect x="128" y="30" width="40" height="14" fill="#111111"/>
+        <text x="148" y="40" font-family="DejaVu Serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">100 m</text>
+        <circle cx="30" cy="34" r="3" fill="#111111"/>
+        <circle cx="48" cy="38" r="3" fill="#111111"/>
+      </svg></div>
+      <div class="ckick"><span>BOGOR &middot; DISASTER</span><span class="badge">REPORTED</span></div>
+      <h3>9 dead, 17 still trapped in flooded gold mine</h3>
+      <p>Rescuers pull bodies from a 100-metre pit in West Java.</p>
+    </div>
+    <div class="card"><span class="num">8</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <path d="M20 44 L20 24 L48 8 L76 24 L76 44 Z" fill="none" stroke="#111111" stroke-width="3"/>
+        <rect x="42" y="32" width="12" height="12" fill="#111111"/>
+        <path d="M96 6 L84 26 L94 26 L88 42 L106 20 L95 20 L104 6 Z" fill="#c8102e"/>
+        <rect x="118" y="26" width="54" height="16" fill="#111111"/>
+        <text x="145" y="38" font-family="DejaVu Serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">&pound;2,166</text>
+      </svg></div>
+      <div class="ckick"><span>LONDON &middot; ENERGY</span><span class="badge">OFFICIAL</span></div>
+      <h3>UK energy price cap to rise 26% in January</h3>
+      <p>Ofgem: typical bill rises to &pound;2,166 a year from 1 January.</p>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">9</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <rect x="52" y="6" width="76" height="36" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+        <line x1="60" y1="14" x2="120" y2="14" stroke="#111111" stroke-width="2"/>
+        <line x1="60" y1="21" x2="120" y2="21" stroke="#111111" stroke-width="2"/>
+        <line x1="60" y1="28" x2="104" y2="28" stroke="#111111" stroke-width="2"/>
+        <line x1="60" y1="35" x2="112" y2="35" stroke="#111111" stroke-width="2"/>
+        <circle cx="140" cy="34" r="9" fill="#c8102e"/>
+        <circle cx="140" cy="34" r="5" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+        <rect x="14" y="12" width="22" height="14" fill="#1b3a5c"/>
+        <circle cx="25" cy="19" r="3" fill="#ffffff"/>
+        <rect x="14" y="30" width="22" height="14" fill="#0f5c46"/>
+        <circle cx="25" cy="37" r="3" fill="#ffd700"/>
+      </svg></div>
+      <div class="ckick"><span>CANBERRA &middot; DIPLOMACY</span><span class="badge">OFFICIAL</span></div>
+      <h3>Solomon Islands signs Australia security pact</h3>
+      <p>Australia &lsquo;primary partner&rsquo;; AU$740m over 10 years.</p>
+    </div>
+    <div class="card"><span class="num">10</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <line x1="90" y1="6" x2="90" y2="42" stroke="#111111" stroke-width="3"/>
+        <line x1="30" y1="14" x2="150" y2="14" stroke="#111111" stroke-width="3"/>
+        <path d="M30 14 L18 28 L42 28 Z" fill="none" stroke="#111111" stroke-width="2.5"/>
+        <path d="M150 14 L138 28 L162 28 Z" fill="none" stroke="#111111" stroke-width="2.5"/>
+        <line x1="60" y1="42" x2="120" y2="42" stroke="#111111" stroke-width="3"/>
+        <line x1="70" y1="36" x2="110" y2="36" stroke="#111111" stroke-width="2"/>
+        <circle cx="90" cy="8" r="3" fill="#c8102e"/>
+      </svg></div>
+      <div class="ckick"><span>JERUSALEM &middot; JUSTICE</span><span class="badge">OFFICIAL</span></div>
+      <h3>Judges urge rethink of Netanyahu graft charges</h3>
+      <p>Urge prosecutors to drop Case 4000. No charges dismissed.</p>
+    </div>
+    <div class="card"><span class="num">11</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <path d="M70 44 L92 10 L114 44 Z" fill="none" stroke="#111111" stroke-width="4"/>
+        <line x1="82" y1="27" x2="102" y2="27" stroke="#111111" stroke-width="3"/>
+        <line x1="76" y1="36" x2="108" y2="36" stroke="#111111" stroke-width="3"/>
+        <path d="M128 12 L134 20 L142 10" fill="none" stroke="#ffb700" stroke-width="3"/>
+        <path d="M140 26 L146 34 L154 24" fill="none" stroke="#ffb700" stroke-width="3"/>
+        <rect x="118" y="34" width="52" height="12" fill="#111111"/>
+        <text x="144" y="43" font-family="DejaVu Serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">5 REGIONS</text>
+      </svg></div>
+      <div class="ckick"><span>UKRAINE &middot; WAR</span><span class="badge">REPORTED</span></div>
+      <h3>Russian strikes kill 5, cut power in 5 regions</h3>
+      <p>Nuclear plant on diesel after 17th grid loss this year.</p>
+    </div>
+    <div class="card"><span class="num">12</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <path d="M30 44 L30 18 L52 18 L52 12 L74 12 L74 18 L96 18 L96 44 Z" fill="#111111"/>
+        <rect x="38" y="24" width="8" height="8" fill="#ffffff"/>
+        <rect x="58" y="24" width="8" height="8" fill="#ffffff"/>
+        <rect x="78" y="24" width="8" height="8" fill="#ffffff"/>
+        <path d="M120 44 Q118 26 132 18 Q130 32 142 26 Q138 38 132 44 Z" fill="#8a8a8a"/>
+        <rect x="140" y="4" width="38" height="13" fill="#c8102e"/>
+        <text x="159" y="14" font-family="DejaVu Serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">4 KILLED</text>
+      </svg></div>
+      <div class="ckick"><span>GAZA CITY &middot; WAR</span><span class="badge">REPORTED</span></div>
+      <h3>Israeli strike kills Hamas security chief</h3>
+      <p>Hamas security chief killed in a strike on Gaza City.</p>
+    </div>
+    <div class="card"><span class="num">13</span>
+      <div class="cscene"><svg viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="180" height="48" fill="#ffffff"/>
+        <rect x="16" y="30" width="52" height="12" fill="#1e5b2e"/>
+        <rect x="22" y="22" width="52" height="12" fill="#2a7a3e"/>
+        <rect x="28" y="14" width="52" height="12" fill="#37914e"/>
+        <rect x="104" y="10" width="66" height="26" fill="#111111"/>
+        <text x="137" y="28" font-family="DejaVu Serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">17,000</text>
+      </svg></div>
+      <div class="ckick"><span>DHAKA &middot; LABOUR</span><span class="badge">OFFICIAL</span></div>
+      <h3>Garment workers offered higher minimum wage</h3>
+      <p>Wage board: 12,500 to 17,000 taka ($100 to $136) a month.</p>
+    </div>
+  </div>
+  <style>
+    .bottom { display: flex; gap: 12px; margin-bottom: 6px; }
+    .mapbox { width: 300px; flex: none; }
+    .mapbox h4, .alsobox h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .mapbox h4 { font-size: 11px; }
+    .mapbox h4 span, .alsobox h4 span { color: #8f1616; }
+    .alsobox { flex: 1; min-width: 0; }
+    .also-cols { display: flex; gap: 14px; }
+    .also-cols ol { list-style: none; }
+    .also-cols li { font-size: 9.5px; line-height: 1.1; margin-bottom: 1px; }
+    .also-cols li b { font-weight: 700; }
+    .datecheck { border: 3px solid #000; padding: 3px 9px; font-size: 10.5px; line-height: 1.35; margin-bottom: 6px; }
+    .datecheck b { color: #8f1616; }
+    .foot { font-size: 9px; text-align: center; }
+  </style>
+  <div class="bottom">
+    <div class="mapbox">
+      <h4>WHERE IT HAPPENED — <span>DOTS = STORIES</span></h4>
+      <svg viewBox="0 0 330 190" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:auto">
+        <rect x="0" y="0" width="330" height="190" fill="#ffffff"/>
+        <g fill="#e9e9e9" stroke="#111111" stroke-width="1">
+          <path d="M28,58 L20,44 L28,30 L48,26 L70,30 L88,26 L95,34 L88,44 L78,48 L82,58 L66,66 L58,76 L44,72 L34,66 Z"/>
+          <path d="M100,16 L112,12 L120,18 L112,24 L100,22 Z"/>
+          <path d="M88,104 L104,98 L124,104 L128,122 L118,146 L106,162 L96,146 L86,124 Z"/>
+          <path d="M162,44 L172,32 L192,30 L206,38 L202,50 L188,54 L172,52 Z"/>
+          <path d="M168,76 L196,72 L214,80 L210,100 L200,124 L188,138 L176,122 L166,100 L162,84 Z"/>
+          <path d="M206,30 L240,24 L280,26 L308,34 L318,48 L306,62 L286,66 L278,78 L268,92 L258,100 L248,84 L236,78 L222,66 L210,56 L206,44 Z"/>
+          <path d="M276,138 L300,132 L316,140 L310,154 L290,158 L278,150 Z"/>
+        </g>
+        <g font-family="DejaVu Serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">
+          <circle cx="208" cy="88" r="7" fill="#c8102e"/><text x="208" y="91">1</text>
+          <circle cx="191" cy="122" r="7" fill="#c8102e"/><text x="191" y="125">2</text>
+          <circle cx="281" cy="55" r="7" fill="#c8102e"/><text x="281" y="58">3</text>
+          <circle cx="94" cy="54" r="7" fill="#c8102e"/><text x="94" y="57">4</text>
+          <circle cx="232" cy="59" r="7" fill="#c8102e"/><text x="232" y="62">5</text>
+          <circle cx="182" cy="72" r="7" fill="#c8102e"/><text x="182" y="75">6</text>
+          <circle cx="263" cy="102" r="7" fill="#c8102e"/><text x="263" y="105">7</text>
+          <circle cx="165" cy="41" r="7" fill="#c8102e"/><text x="165" y="44">8</text>
+          <circle cx="312" cy="105" r="7" fill="#c8102e"/><text x="312" y="108">9</text>
+          <circle cx="203" cy="56" r="7" fill="#c8102e"/><text x="203" y="59">10</text>
+          <circle cx="193" cy="42" r="7" fill="#c8102e"/><text x="193" y="45">11</text>
+          <circle cx="196" cy="76" r="7" fill="#c8102e"/><text x="196" y="79">12</text>
+          <circle cx="248" cy="70" r="7" fill="#c8102e"/><text x="248" y="73">13</text>
+        </g>
+      </svg>
+    </div>
+    <div class="alsobox">
+      <h4>ALSO ON WEDNESDAY 25 NOVEMBER — <span>37 MORE STORIES</span></h4>
+      <div class="also-cols">
+        <ol>
+          <li><b>14 WASHINGTON:</b> US tells citizens to leave Iran</li>
+          <li><b>15 HORMUZ:</b> Tankers hit mines, catch fire</li>
+          <li><b>16 SUDAN:</b> RSF drones kill 19 civilians</li>
+          <li><b>17 NEW YORK:</b> Huawei found guilty in US trial</li>
+          <li><b>18 BRUSSELS:</b> EU votes to relax nature laws</li>
+          <li><b>19 LUXEMBOURG:</b> EU court sets cage-farm deadline</li>
+          <li><b>20 BRUSSELS:</b> EU unveils &euro;50bn quantum plan</li>
+          <li><b>21 EU &amp; UK:</b> Fragrance makers fined &euro;570m+</li>
+          <li><b>22 ATHENS:</b> Greece general strike</li>
+          <li><b>23 LONDON:</b> Poundland collapses, 12,000 jobs at risk</li>
+          <li><b>24 WARSAW:</b> Poland plans no-fly zone on Ukraine border</li>
+          <li><b>25 SAVASLEYKA:</b> Ukraine hits airfield, 5 jets damaged</li>
+          <li><b>26 SPAIN:</b> Puigdemont to return on 12 December</li>
+          <li><b>27 CARACAS:</b> Venezuela announces $400m Shell deal</li>
+          <li><b>28 SANTIAGO:</b> Chile approves Cuba tribunal call</li>
+          <li><b>29 PYONGYANG:</b> Kim orders wider nuclear deployment</li>
+          <li><b>30 PYONGYANG:</b> North Korea expels Swiss diplomat</li>
+          <li><b>31 CAMBODIA:</b> Cambodia&ndash;China begin Golden Dragon drill</li>
+          <li><b>32 ANKARA:</b> Haftar meets Erdo&#287;an in Ankara</li>
+        </ol>
+        <ol>
+          <li><b>33 NIGER:</b> Saudi national kidnapped, IS blamed</li>
+          <li><b>34 MISSISSIPPI:</b> Cessna crash kills 6</li>
+          <li><b>35 IOWA:</b> Army detonates 5 tons of lead azide</li>
+          <li><b>36 GAZA CITY:</b> Amnesty: women bear crushing toll in Gaza</li>
+          <li><b>37 DR CONGO:</b> Mining suspended after deadly dispute</li>
+          <li><b>38 TURKEY:</b> Top court upholds &#304;mamo&#287;lu ruling</li>
+          <li><b>39 BAGHDAD:</b> Iraq takes over Kurdish oilfields</li>
+          <li><b>40 NEW YORK:</b> Macy&rsquo;s parade postponed to 28 Nov</li>
+          <li><b>41 INDIA:</b> Sooryavanshi smashes record 200 off 52</li>
+          <li><b>42 NAIROBI:</b> German president meets Kenya&rsquo;s Ruto</li>
+          <li><b>43 KYIV:</b> Zelensky seeks &euro;115bn in aid for 2027</li>
+          <li><b>44 BENGHAZI:</b> 2 officers die of wounds from drone raid</li>
+          <li><b>45 WASHINGTON:</b> FCC clears SpaceX 1M orbital data centres</li>
+          <li><b>46 NEW YORK:</b> Dow +0.3%, Nasdaq &minus;0.6% on Wall St</li>
+          <li><b>47 GAZA CITY:</b> Winter rains threaten 1,000 shelter sites</li>
+          <li><b>48 JERUSALEM:</b> Knesset advances bill for 7 October inquiry</li>
+          <li><b>49 SYDNEY:</b> Ex-officer guilty of Baird, Davies murders</li>
+          <li><b>50 UN:</b> 16 days of action against violence on women begin</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="datecheck"><b>DATE CHECK</b> — Every story above happened or was first reported Wednesday 25 November 2026. Left out: Riyadh tower attack, 11 hurt (Tue 24 Nov) &middot; COP31 collapse (Sun 23 Nov) &middot; Fed minutes (Tue 24 Nov). Not yet: Thanksgiving (Thu 26 Nov).</div>
+  <div class="foot">OFFICIAL authority&rsquo;s figure or act &middot; REPORTED press report &middot; CLAIM one-sided account — Sources: Reuters &middot; AP &middot; AFP &middot; SPA &middot; Ofgem &middot; USTR &middot; Yonhap &middot; Xinhua &middot; IAEA &middot; FCC &middot; Al Jazeera. ONE DAY, ONE PAGE.</div>
+</div>
+</body>
+</html>
